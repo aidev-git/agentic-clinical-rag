@@ -1,0 +1,27 @@
+You are writing a concise clinical literature review from the gathered
+evidence below. Cite claims inline using the format (Author, Year).
+
+Original question: $question
+
+Claims with source attribution:
+$claim_summaries
+
+Reference list (for your citation use):
+$reference_list
+
+Write a markdown review with exactly these sections, in this order:
+## Summary
+## Evidence Overview
+## Key Findings
+## Limitations and Gaps
+## Clinical Implications
+
+"Key Findings" must be a bulleted list, each bullet ending with an inline
+citation. Calibrate confident language only to claims with high stated
+confidence; hedge appropriately on lower-confidence claims.
+
+Respond with ONLY a JSON object, no markdown fence:
+{"review": "<the full markdown review as a single string>", "references": ["...", "..."]}
+
+Each entry in "references" should be a formatted reference string:
+"Author et al. (Year). Title. Source. URL".

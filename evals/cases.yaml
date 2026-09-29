@@ -1,0 +1,24 @@
+- id: glp1-weight
+  question: "What is the current evidence on GLP-1 agonists for non-diabetic weight management?"
+  expected_themes: ["efficacy", "safety", "adverse effects", "durability of weight loss"]
+  expected_sources: ["NEJM", "The Lancet", "JAMA"]
+
+- id: sglt2-heart-failure
+  question: "How effective are SGLT2 inhibitors in reducing hospitalization for heart failure?"
+  expected_themes: ["cardiovascular outcomes", "hospitalization risk", "subgroup effects"]
+  expected_sources: ["NEJM", "Circulation"]
+
+- id: statin-primary-prevention
+  question: "What is the evidence for statin use in primary prevention of cardiovascular disease in low-risk adults?"
+  expected_themes: ["risk stratification", "number needed to treat", "side effects"]
+  expected_sources: ["JAMA", "The Lancet"]
+
+- id: anticoagulant-afib-elderly
+  question: "How do direct oral anticoagulants compare to warfarin for stroke prevention in elderly atrial fibrillation patients?"
+  expected_themes: ["bleeding risk", "stroke prevention", "elderly subpopulation"]
+  expected_sources: ["NEJM", "BMJ"]
+
+- id: biologics-rheumatoid-arthritis
+  question: "What is the comparative effectiveness of biologic DMARDs versus methotrexate monotherapy in rheumatoid arthritis?"
+  expected_themes: ["disease activity scores", "remission rates", "infection risk"]
+  expected_sources: ["Annals of Internal Medicine", "Arthritis & Rheumatology"]

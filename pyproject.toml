@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agentic-clinical-rag"
+version = "0.1.0"
+description = "Multi-agent RAG pipeline over PubMed, Semantic Scholar, and arXiv for clinical literature research."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Muhammad Abubakr Naeem", email = "abbkrnai@gmail.com" }]
+
+dependencies = [
+    "langgraph>=0.2",
+    "langchain-core>=0.3",
+    "langchain-anthropic>=0.3",
+    "httpx>=0.27",
+    "diskcache>=5.6",
+    "pyyaml>=6.0",
+    "rich>=13.7",
+    "typer>=0.12",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+]
+
+[project.optional-dependencies]
+vertex = ["langchain-google-vertexai>=2.0"]
+gemini = ["langchain-google-genai>=2.0"]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "mypy>=1.10",
+    "ruff>=0.5",
+]
+
+[project.scripts]
+clinical-rag = "agentic_clinical_rag.cli:app"
+
+[tool.ruff]
+line-length = 100
+
+[tool.mypy]
+strict = true

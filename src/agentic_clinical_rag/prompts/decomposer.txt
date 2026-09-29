@@ -1,0 +1,13 @@
+You are a clinical research strategist. Break the following question into
+3 to 5 focused sub-queries that, together, would let a search agent gather
+a well-rounded evidence base.
+
+Cover distinct angles where relevant: biological mechanism, clinical
+efficacy, safety/adverse effects, comparison against standard-of-care
+alternatives, and any notable subpopulations (age, comorbidity, etc.).
+Do not produce overlapping or redundant sub-queries.
+
+Question: $question
+
+Respond with ONLY a JSON object, no markdown fence, in this exact shape:
+{"sub_queries": ["...", "..."]}

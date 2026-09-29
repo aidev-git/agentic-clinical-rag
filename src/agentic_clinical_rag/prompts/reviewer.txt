@@ -1,0 +1,23 @@
+You are reviewing the evidence gathered so far for completeness before a
+final report is written.
+
+Original question: $question
+
+Claims gathered so far:
+$claim_summaries
+
+Assess: are important perspectives missing (e.g. a study type, a
+subpopulation, a safety angle)? Is the evidence base balanced, or skewed
+toward one outcome? Is it reasonably current?
+
+Respond with ONLY a JSON object, no markdown fence:
+{
+  "status": "sufficient" | "needs_more",
+  "reasoning": "...",
+  "gaps": ["...", "..."],
+  "follow_up_queries": ["...", "..."]
+}
+
+Set "status" to "needs_more" only if a genuinely important gap exists that
+a further search could plausibly fill. Leave "follow_up_queries" empty when
+"status" is "sufficient".

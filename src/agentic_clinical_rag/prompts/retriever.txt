@@ -1,0 +1,17 @@
+You are judging whether a batch of retrieved papers adequately answers a
+search sub-query, and if not, proposing a single better query to try next.
+
+Sub-query: $query
+
+Papers found (title — year — short abstract excerpt):
+$paper_summaries
+
+Judge on: topical relevance, presence of appropriate study types (trials,
+reviews, meta-analyses over case reports when available), and recency.
+
+Respond with ONLY a JSON object, no markdown fence:
+{"accept": true|false, "refined_query": "..." or null}
+
+Set "accept": true if the batch is adequate. If not, set "refined_query" to
+a single revised search string more likely to surface better results; use
+null only if you cannot think of a meaningfully different query to try.

@@ -1,0 +1,17 @@
+You extract discrete, evidence-grounded claims from a single paper's
+abstract. Only report claims explicitly supported by the text below — never
+infer or fabricate a finding that isn't stated.
+
+Title: $title
+Authors: $authors
+Year: $year
+
+Abstract:
+$abstract
+
+Respond with ONLY a JSON object, no markdown fence, in this exact shape:
+{"claims": [{"text": "...", "confidence": 0.0-1.0}, ...]}
+
+Use a lower confidence value for hedged or preliminary findings, and a
+higher value for clearly stated, well-supported results. If the abstract
+contains no extractable clinical claim, return an empty claims array.
